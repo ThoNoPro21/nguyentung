@@ -55,7 +55,7 @@ export function SwiperComponent() {
                         - Nếu bạn làm hoặc dự định làm tiếp thị liên kết, bạn chỉ cần viết một email, và tiền sẽ về tài khoản chỉ sau vài giờ.<br></br>
                         - Nếu bạn là nhà kinh doanh online, bạn sẽ tự động hóa việc tìm kiếm khách hàng và tăng giá trị trọn đời của khách hàng (LVC) lên nhiều lần.
                     </p>
-                    <Image src='/assets/anh1.jpg' alt="avatar" width={1000} height={1000} className="rounded-md w-full h-48 object-cover bg-center " />
+                    <Image src='/assets/anh1.jpg' alt="avatar" width={1000} height={1000} priority className="rounded-md w-full h-48 object-cover bg-center " />
                 </div>
             </SwiperSlide>
             <SwiperSlide>

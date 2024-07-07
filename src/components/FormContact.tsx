@@ -32,7 +32,7 @@ const ContactForm = () => {
             wrapperCol={{ span: 24 }}
             initialValues={{ remember: true }}
             autoComplete="off"
-            className="w-64 "
+            className="w-full  "
             onFinish={handleSubmit}
         >
             <Form.Item<FieldType>

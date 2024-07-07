@@ -1,6 +1,8 @@
-
+"use client"
 import FormContact from "@/components/FormContact";
+import FooterComponent from "@/components/nav/FooterComponent";
 import { SwiperComponent } from "@/components/swiper";
+import { Footer } from "antd/es/layout/layout";
 import Image from "next/image"
 
 export default function Home() {
@@ -19,7 +21,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center w-full px-2">
                 <div className="flex flex-col md:flex-row pt-5 gap-4">
-                    <Image src="/assets/anh1.jpg" alt="avatar" width={1000} height={1000} className="w-96 h-auto rounded-md" />
+                    <Image src="/assets/anh1.jpg" alt="avatar" width={1000} height={1000} priority className="w-96 h-auto rounded-md" />
                     <div className="flex flex-col">
                         <h1 className="text-2xl font-bold">Giai đoạn đầy bão tố</h1>
                         <p className="max-w-96">Trước khi trở thành kỹ sư xây dựng và kinh doanh trên Internet tại Hàn Quốc, Tuyên nói rằng mình đã trải qua giai đoạn đầy bão tố, khiến anh trở nên im lặng và mất phương hướng.Giai đoạn đầy bão tố
@@ -42,24 +44,27 @@ export default function Home() {
                 <div className="flex flex-col pt-5 gap-4 max-w-screen-2xl" >
                     <h1 className="text-2xl font-bold text-center">Hành Trình Đến Với Internet</h1>
                     <p className="w-full">Với hơn 12 năm kinh nghiệm trong lĩnh vực kỹ sư xây dựng tại Hàn Quốc, cùng với 6 năm kinh nghiệm kinh doanh và bán hàng, và hơn 3 năm huấn luyện đội ngũ quảng cáo bán hàng online và chốt sales, tôi nhận thấy rằng nhiều doanh nghiệp gặp khó khăn lớn nhất trong việc tiếp cận khách hàng. Nhiều chủ doanh nghiệp đã đầu tư vào nhà máy sản xuất, sở hữu sản phẩm chất lượng cao và thương hiệu uy tín, nhưng lại thiếu kỹ năng marketing để tiếp cận thị trường. Họ thực hiện tốt các bước như cải tiến chất lượng, thiết kế bao bì, nhưng gặp khó khăn trong việc tiếp thị và bán hàng.
-                        Chính vì lý do đó, tôi quyết định tổ chia sẻ trực tiếp trên nền tảng Facebook, Tiktok, Youtube có tên <span className="text-lg text-cyan-600">Nguyễn Tuyên</span>. Trong khóa học này, tôi còn giúp các chủ doanh nghiệp kết nối các mặt hàng tại việt nam xuất khẩu sang thị trường Hàn Quốc, và ngược lại tại các doanh nghiệp ở Hàn Quốc như mỹ phẩm sâm Hàn giá gốc. Tuyên săn sàng kết nối giúp nhau phát triển . Đây là một khóa học hiếm hoi và có giá trị đặc biệt, không chỉ dạy các công thức, nguyên tắc hay lý thuyết chung chung, mà tập trung vào những vấn đề cốt lõi và quan trọng nhất trong lĩnh vực marketing và bán hàng.</p>
+                        Chính vì lý do đó, tôi quyết định tổ chia sẻ trực tiếp trên nền tảng Facebook, Tiktok, Youtube có tên <span className="text-lg text-cyan-600">Nguyễn Tuyên</span>. Trong những buổi livestream, tôi còn giúp các chủ doanh nghiệp kết nối các mặt hàng tại việt nam xuất khẩu sang thị trường Hàn Quốc, và ngược lại tại các doanh nghiệp ở Hàn Quốc như mỹ phẩm sâm Hàn giá gốc. Tuyên săn sàng kết nối giúp nhau phát triển . Đây là một khóa học hiếm hoi và có giá trị đặc biệt, không chỉ dạy các công thức, nguyên tắc hay lý thuyết chung chung, mà tập trung vào những vấn đề cốt lõi và quan trọng nhất trong lĩnh vực marketing và bán hàng.</p>
                 </div>
             </div>
             <div className="pt-20">
                 <SwiperComponent />
             </div>
-            <div className="bg-gradient-to-r from-violet-200 to-pink-200 flex flex-col justify-center items-center">
-                <h1 className="pt-20 text-2xl font-bold text-center">Liên Hệ</h1>
+            <div className="bg-gradient-to-r from-violet-200 to-pink-200 flex flex-col justify-center items-center py-5">
+                <h1 className="py-5 text-2xl font-bold text-center">Liên Hệ</h1>
                 <div className="flex flex-col sm:flex-row w-auto gap-2 p-4  bg-white rounded-md">
-                    <div className="h-full w-1/2">
-                        <p className="font-normal text-xs sm:text-sm">Số điện thoại : <span className="font-bold">+82 01043856688</span></p>
-                        <p className="font-normal text-xs sm:text-sm">Gmail : <span className="font-bold">nguyentuyen6789kr@gmail.com</span></p>
+                    <div className="h-full w-full md:w-1/2">
+                        <p className="font-semibold text-xs sm:text-sm">Số điện thoại : <span className="font-bold">+82 01043856688</span></p>
+                        <p className="font-semibold text-xs sm:text-sm">Gmail : <span className="font-bold">nguyentuyen6789kr@gmail.com</span></p>
                         <div className="flex justify-center items-center pt-4">
                             <FormContact />
                         </div>
                     </div>
-                    <Image src="/assets/anh1.jpg" alt="avatar" width={1000} height={1000} className="h-auto rounded-md w-1/2" />
+                    <Image src="/assets/anh1.jpg" alt="avatar" width={1000} height={1000} priority className="h-auto rounded-md w-1/2 hidden md:block" />
                 </div>
+            </div>
+            <div className="pt-20">
+                <FooterComponent />
             </div>
         </main>
     );
