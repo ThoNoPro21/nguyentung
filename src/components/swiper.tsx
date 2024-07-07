@@ -77,7 +77,7 @@ export function SwiperComponent() {
                     <p className='flex-1'>
                         Giờ đây, tôi muốn nói rằng bạn có thể sử dụng công cụ này để phát triển công việc kinh doanh của riêng mình.
                         Bạn có thể trở nên giàu có bằng cách áp dụng công cụ này vào việc kinh doanh những sản phẩm thông thường, nhưng bạn sẽ vượt trội hơn hẳn những người khác.
-                        Hãy nắm bắt cơ hội này để biến giấc mơ kinh doanh của bạn thành hiện thực. Hãy vào Youtube và TikTok cả Facebook <span className="text-lg text-cyan-600">Nguyễn Tuyên</span> follow theo dõi những livestream vào lúc 20h Hàn Quốc va 22h Việt Nam.
+                        Hãy nắm bắt cơ hội này để biến giấc mơ kinh doanh của bạn thành hiện thực. Hãy vào Youtube và TikTok cả Facebook <span className="text-lg text-cyan-600">Nguyễn Tuyên</span> follow theo dõi những livestream vào lúc 20h Hàn Quốc và 22h Việt Nam.
                     </p>
                     <Image src='/assets/anh-beach.jpg' alt="avatar" width={1000} height={1000} className="rounded-md w-full h-48 object-cover bg-center" />
                 </div>
