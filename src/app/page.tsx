@@ -7,7 +7,7 @@ import Image from "next/image"
 
 export default function Home() {
     return (
-        <main className="px-2 lg:px-10 w-full h-auto">
+        <main className="px-2 lg:px-10 h-auto">
             <div className="relative bg-[url('/assets/bg.jpg')] bg-cover bg-center w-full h-screen flex items-center justify-center">
                 <div className="flex flex-col text-center">
                     <p className="text-3xl font-bold max-w-96 ">
