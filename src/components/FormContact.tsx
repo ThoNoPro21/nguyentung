@@ -1,29 +1,24 @@
 "use client"
 import useContactForm from "@/app/hooks/useFormContact";
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Spin } from "antd";
+import { sendEmailType } from "@/types/sendEmail";
+import sendEmail from "@/app/lib/sendEmail/senEmail";
 import { useState } from "react";
-type FieldType = {
-    email?: string;
-    subject?: string;
-    message?: string;
-};
 
 const ContactForm = () => {
+
+    const [isLoading, setLoangding] = useState(false)
     const { values, handleChange } = useContactForm();
-    const handleSubmit = async (e: any) => {
-
-        const res = await fetch('/api/sendEmail', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify((values.email, values.subject, values.message)),
-        });
-
+    const handleSubmit = async () => {
+        setLoangding(true)
+        const res = await sendEmail(values)
         const result = await res.json();
-        alert(result.message);
+        setLoangding(false)
+        console.log('Result:',result);
     }
-
+    if (isLoading) {
+        return <Spin fullscreen />
+    }
     return (
         <Form
             name="form-contact"
@@ -31,11 +26,11 @@ const ContactForm = () => {
             labelCol={{ span: 8, offset: 24 }}
             wrapperCol={{ span: 24 }}
             initialValues={{ remember: true }}
-            autoComplete="off"
+            autoComplete="on"
             className="w-full  "
             onFinish={handleSubmit}
         >
-            <Form.Item<FieldType>
+            <Form.Item<sendEmailType>
                 label="Email"
                 rules={[{ required: true, message: 'Không được bỏ trống!' }]}
             >
@@ -45,7 +40,7 @@ const ContactForm = () => {
                     onChange={handleChange} />
             </Form.Item>
 
-            <Form.Item<FieldType>
+            <Form.Item<sendEmailType>
                 label="Chủ đề"
                 rules={[{ required: true, message: 'Không được bỏ trống!' }]}
             >
@@ -56,7 +51,7 @@ const ContactForm = () => {
                     onChange={handleChange} />
             </Form.Item>
 
-            <Form.Item<FieldType>
+            <Form.Item<sendEmailType>
                 label="Nội dung"
                 rules={[{ required: true, message: 'Không được bỏ trống!' }]}
             >

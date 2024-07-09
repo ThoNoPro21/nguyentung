@@ -1,7 +1,8 @@
+import { sendEmailType } from '@/types/sendEmail';
 import { useState } from 'react';
 
 const useContactForm = () => {
-    const [values, setValues] = useState({
+    const [values, setValues] = useState<sendEmailType>({
         email: '',
         subject: '',
         message: '',
