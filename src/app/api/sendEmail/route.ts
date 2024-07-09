@@ -21,18 +21,17 @@ export async function POST(request: Request) {
             secure: false,
             auth: {
                 user: 'uongluong159@gmail.com',
-                pass: 'rzky lkgv hmas bnpi',
+                pass: 'ydes zlpa qnvj dhjb',
             },
         } as TransportOptions);
 
         let mailOptions = {
             from: email,
-            to: 'uongluong159@gmail.com',
+            to: 'Luông Uông <uongluong159@gmail.com>',
             subject: subject,
             html: `<p>${message}</p>`,
             text: message,
         };
-
         await transporter.sendMail(mailOptions);
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
     } catch (error) {

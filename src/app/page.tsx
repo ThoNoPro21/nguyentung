@@ -1,13 +1,15 @@
 "use client"
 import FormContact from "@/components/FormContact";
 import FooterComponent from "@/components/nav/FooterComponent";
+import HeaderComponent from "@/components/nav/HeaderComponent";
 import { SwiperComponent } from "@/components/swiper";
 import { Footer } from "antd/es/layout/layout";
 import Image from "next/image"
 
 export default function Home() {
     return (
-        <main className="px-2 lg:px-10 h-auto">
+        <main className="px-2 lg:px-10 h-auto overflow-hidden">
+            <HeaderComponent />
             <div className="relative bg-[url('/assets/bg.jpg')] bg-cover bg-center w-full h-screen flex items-center justify-center">
                 <div className="flex flex-col text-center">
                     <p className="text-3xl font-bold max-w-96 ">
@@ -47,10 +49,10 @@ export default function Home() {
                         Chính vì lý do đó, tôi quyết định tổ chia sẻ trực tiếp trên nền tảng Facebook, Tiktok, Youtube có tên <span className="text-lg text-cyan-600">Nguyễn Tuyên</span>. Trong những buổi livestream, tôi còn giúp các chủ doanh nghiệp kết nối các mặt hàng tại việt nam xuất khẩu sang thị trường Hàn Quốc, và ngược lại tại các doanh nghiệp ở Hàn Quốc như mỹ phẩm sâm Hàn giá gốc. Tuyên săn sàng kết nối giúp nhau phát triển . Đây là một khóa học hiếm hoi và có giá trị đặc biệt, không chỉ dạy các công thức, nguyên tắc hay lý thuyết chung chung, mà tập trung vào những vấn đề cốt lõi và quan trọng nhất trong lĩnh vực marketing và bán hàng.</p>
                 </div>
             </div>
-            <div className="pt-20">
+            <div className="mt-20">
                 <SwiperComponent />
             </div>
-            <div className="bg-gradient-to-r from-violet-200 to-pink-200 flex flex-col justify-center items-center py-5">
+            <div className="bg-gradient-to-r from-violet-200 to-pink-200 flex flex-col justify-center items-center py-5 mt-20">
                 <h1 className="py-5 text-2xl font-bold text-center">Liên Hệ</h1>
                 <div className="flex flex-col sm:flex-row w-auto gap-2 p-4  bg-white rounded-md">
                     <div className="h-full w-full md:w-1/2">
