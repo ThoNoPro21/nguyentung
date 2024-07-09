@@ -20,8 +20,8 @@ export async function POST(request: Request) {
             port: 587,
             secure: false,
             auth: {
-                user: "uongluong159@gmail.com",
-                pass: process.env.CONTACT_FORM_PASS_LUONG,
+                user: process.env.CONTACT_FORM_RECEIVE_EMAIL,
+                pass: process.env.CONTACT_FORM_PASS_TUYEN,
             },
         } as TransportOptions);
 

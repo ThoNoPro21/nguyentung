@@ -19,6 +19,7 @@ const ContactForm = () => {
       icon: icon,
       message: 'Thông báo',
       description: description,
+	  placement:"bottomRight",
       showProgress: true,
     });
   };
