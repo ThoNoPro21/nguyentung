@@ -1,5 +1,5 @@
 export type sendEmailType = {
-    email?: string;
-    subject?: string;
+    emailFrom?: string;
+    phoneNumber?: string;
     message?: string;
 };

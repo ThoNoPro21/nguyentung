@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 const useContactForm = () => {
     const [values, setValues] = useState<sendEmailType>({
-        email: '',
-        subject: '',
+        emailFrom: '',
+        phoneNumber: '',
         message: '',
     });
 
