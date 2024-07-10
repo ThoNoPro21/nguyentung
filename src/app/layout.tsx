@@ -32,6 +32,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <link
+                rel="icon"
+                href="./assets/favicon.jpg"
+            />
+
             <body className={inter.className}>
                 <AntdRegistry>{children}</AntdRegistry>
             </body>
