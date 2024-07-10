@@ -40,6 +40,16 @@ const config: Config = {
             ...designColors,
         },
         extend: {
+            keyframes: {
+                pulseGlowBlue: {
+                    '0%': { boxShadow: '0 0 0px rgba(0, 0, 255, 0.5)' },
+                    '50%': { boxShadow: '0 0 40px rgba(0, 0, 255, 1)' },
+                    '100%': { boxShadow: '0 0 0px rgba(0, 0, 255, 0.5)' },
+                },
+            },
+            animation: {
+                pulseGlowBlue: 'pulseGlowBlue 2s infinite',
+            },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
